@@ -32,7 +32,7 @@ class Song
   end
   
   def self.find_by_name(name)
-    @@all.find{|song|
+    self.all.find{|song|
       song.name == name
     }
   end
@@ -46,7 +46,7 @@ class Song
   end
   
   def self.alphabetical 
-    @@all.sort_by{|song|
+    self.all.sort_by{|song|
       song.name # sort by song name 
     }
   end
@@ -66,7 +66,7 @@ class Song
   end
   
   def self.destroy_all
-    @@all.clear 
+    self.all.clear 
   end
 end
 
