@@ -52,8 +52,6 @@ class Song
   end
   
   def self.new_from_filename(name) # in .mp3 format 
-    # takes the name and extracts the relevant parts (name and artist)
-    # creates and returns a new Song instance 
     song_file_array = name.split(" - ")
     song = self.new 
     song.name = song_file_array[1].chomp(".mp3")
